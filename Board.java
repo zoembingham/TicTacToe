@@ -11,20 +11,36 @@ public class Board {
 
     // Class level variables
     private int size;
+    private Square[][] board;
 
     /**
-     * Creates a size by size tic tac toe board
+     * Creates an instance of a size by size tic tac toe board
      * @param size
      */
     public Board(int size){
         this.size = size;
+        createBoard();
     }
 
     /**
-     * Creates a 3 by 3 tic tac toe board
+     * Creates an instance of a 3 by 3 tic tac toe board
      */
     public Board(){
         this.size = SIZE;
+        createBoard();
+    }
+
+    /**
+     * Initializes the board with blank Squares
+     */
+    private void createBoard(){
+        // Iterate over each row in each column and assign a blank square to each position
+        for(int col = 0; col < size; col++){
+            for(int row = 0; row < size; row++){
+                // Create a new square at col, row
+                board[col][row] = new Square(SquareFill.BLANK);
+            }
+        }
     }
     
 }
