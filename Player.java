@@ -18,4 +18,5 @@ public class Player {
         this.symbol = symbol;
         this.state = PlayerState.NOT_STARTED;
     }
+
 }
