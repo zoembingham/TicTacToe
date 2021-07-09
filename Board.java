@@ -13,6 +13,7 @@ public class Board {
     private int size;
     private Square[][] board;
 
+    // Constructors
     /**
      * Creates an instance of a size by size tic tac toe board
      * @param size
@@ -30,6 +31,28 @@ public class Board {
         createBoard();
     }
 
+    // Getters
+    /**
+     * Returns the board as a 2D square array
+     * @return
+     */
+    public Square[][] getBoard(){
+        return board;
+    }
+
+    //Setters
+    /**
+     * Set the filling of the square at col, row to the given filling
+     * @param col
+     * @param row
+     * @return
+     */
+    public String setSquareFill(int col, int row, SquareFill filling){
+        board[col][row].setFilling(filling);
+        return "";
+    }
+
+    // Functional methods
     /**
      * Initializes the board with blank Squares
      */
